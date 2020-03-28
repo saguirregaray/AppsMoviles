@@ -1,0 +1,309 @@
+html {
+    box-sizing: border-box;
+  }
+  
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  line-height: 1.4;
+}
+
+.phone-screen {
+  width: 100%;
+  max-width: 450px;
+  height: 90vh;
+  border: 1px solid black;
+  margin: 5vh auto;
+  border-radius: 5px;
+  color: #f6f6f6;
+  background-color: lightgray;
+  margin-bottom: 0px;
+  
+}
+
+#content{
+  margin-top: 10vh;
+  width: 100%;
+  max-width: 450px;
+  max-height: 73vh;
+  background-color: lightgray;
+  position: static;
+  overflow: scroll;
+  overflow-x: hidden;
+  
+  
+}
+
+#headerContainer{
+  width: 100%;
+  max-width: 450px;
+  background-color: #4267b2;
+  position: fixed;
+  
+}
+#footerContainer{
+  margin: 1px;
+  top: 87.78vh;
+  width: 100%;
+  max-width: 449px;
+  max-height: 100px;
+  background-color: #4267b2;
+  
+  position: fixed;
+
+}
+
+.header {
+  width:auto;
+  background-color: #4267b2;
+  display: flex;
+  position: static;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+
+.content{
+  margin-top: 0px;
+  width: auto;
+  height: auto;
+  color: #f6f6f6;
+  background-color: lightgray;
+  overflow: scroll;
+  overflow: hidden;
+  display: flex;
+  
+}
+
+.container{
+  margin-top: 11px;
+  width: 450px;
+  height: 575px;
+  border: 1px solid lightgrey;
+  margin: 2vh auto;
+  color: #f6f6f6;
+  background-color: white;
+}
+
+.containerHeader {
+  margin-top: 10px;
+  margin-left: 15px;
+  width:250px;
+  background-color: white;
+  display: flex;
+  position: static;
+  justify-content: left;
+  align-items: center;
+  min-height: 50px;
+}
+
+.containerHeader2 {
+  margin-top: 5px;
+  margin-left: 15px;
+  width:450px;
+  background-color: white;
+  display: flex;
+  position: static;
+  justify-content: left;
+  height: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.iconContainer{
+  padding: 0px 0px 0 0px;
+  margin-top: 10px;
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+  
+}
+
+.iconContainerLong{
+  padding: 0px 0px 0 0px;
+  margin-top: 10px;
+  height: 45px;
+  width: 90px;
+  margin-right: 180px;
+  
+}
+
+.iconContainerLonger{
+  padding: 0px 0px 0 0px;
+  margin-top: 10px;
+  height: 30px;
+  width: 450px;
+}
+  
+.camera {
+  background-image: url('../images/camera.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.messenger {
+  background-image: url('../images/messenger.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.observador {
+  background-image: url('../images/observador.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.icons {
+  background-image: url('../images/icons.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  position: fixed;
+  width:auto;
+  background-color: white;
+  display: flex;
+  position: static;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 30px;
+}
+.iconContainerFooter{
+  padding: 0px 0px 0 0px;
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  }
+
+.feed {
+  background-image: url('../images/feed.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.friends {
+  background-image: url('../images/friends.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.marketplace {
+  background-image: url('../images/marketplace.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.notification {
+  background-image: url('../images/notification.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.ad {
+  background-image: url('../images/content.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: inherit;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.imgContainer{
+  width: 450px;
+  height: 240px;
+  color: #f6f6f6;
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+.more {
+  background-image: url('../images/more.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.icons2 {
+  background-image: url('../images/icons2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+  
+.header, .content, .footer {
+  padding: 15px;
+}
+
+.form-group {
+  margin:0;
+  padding:20px ;
+  &:first-child { border-color: transparent; }
+}
+
+.form-control {
+  background-color: #29487D ;
+  padding: 0px 20px 0 20px;
+  margin-top: 10px;
+  color: solid white;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px  #29487D;
+  min-height:35px;
+  height: auto;
+  border-radius: 40px 40px  40px 40px;
+}
+.form-control :focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+
+}
+
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  width: 90%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
