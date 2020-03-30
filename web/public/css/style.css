@@ -136,6 +136,117 @@ body {
   width: 450px;
 }
   
+
+.footer {
+  position: fixed;
+  width:auto;
+  background-color: white;
+  display: flex;
+  position: static;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 30px;
+}
+.iconContainerFooter{
+  padding: 0px 0px 0 0px;
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  }
+
+.iconContainerSmall{
+  padding: 0px 0px 0 0px;
+  margin-top: 0px;
+  height: 30px;
+  width: 30px;
+  }
+
+.imgContainer{
+  width: 450px;
+  height: 240px;
+  color: #f6f6f6;
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+  
+.header, .content, .footer {
+  padding: 15px;
+}
+
+.form-group {
+  margin:0;
+  padding:20px ;
+  &:first-child { border-color: transparent; }
+}
+
+.form-control {
+  background-color: #29487D ;
+  padding: 0px 20px 0 20px;
+  margin-top: 10px;
+  color: solid white;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px  #29487D;
+  min-height:35px;
+  height: auto;
+  border-radius: 40px 40px  40px 40px;
+  color: grey;
+}
+.form-control :focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  width: 90%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.button{
+  width:32%;
+  background-color: white;
+  display: flex;
+  position: static;
+  justify-content: left;
+  height: 28px;
+  
+}
+
+.letra{
+  color: grey; 
+  font-size: 21px; 
+  margin-left: 5px;
+  
+}
+
+.letra:hover{
+  font-weight: bold;
+}
+
+.buttonsContainer{
+  margin-left: 5px;
+  width:445px;
+  background-color: white;
+  display: flex;
+  position: static;
+  justify-content: space-evenly;
+  height: 28px;
+}
+
+/* IMAGES */
+
 .camera {
   background-image: url('../images/camera.png');
   background-repeat: no-repeat;
@@ -172,22 +283,22 @@ body {
   height: 100%;
 }
 
-.footer {
-  position: fixed;
-  width:auto;
-  background-color: white;
-  display: flex;
-  position: static;
-  justify-content: space-between;
-  align-items: center;
-  max-height: 30px;
+.more {
+  background-image: url('../images/more.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
-.iconContainerFooter{
-  padding: 0px 0px 0 0px;
-  margin-top: 10px;
-  height: 30px;
-  width: 30px;
-  }
+.icons2 {
+  background-image: url('../images/icons2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .feed {
   background-image: url('../images/feed.png');
@@ -235,74 +346,33 @@ body {
   margin-bottom: 0px;
 }
 
-.imgContainer{
-  width: 450px;
-  height: 240px;
-  color: #f6f6f6;
+.like {
+  background-image: url('../images/like.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: inherit;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
   margin-bottom: 0px;
-  background-color: white;
 }
-
-.more {
-  background-image: url('../images/more.png');
+.comment {
+  background-image: url('../images/comment.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: inherit;
   width: 100%;
   height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
-.icons2 {
-  background-image: url('../images/icons2.png');
+.share {
+  background-image: url('../images/share.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: inherit;
   width: 100%;
   height: 100%;
-}
-
-
-  
-.header, .content, .footer {
-  padding: 15px;
-}
-
-.form-group {
-  margin:0;
-  padding:20px ;
-  &:first-child { border-color: transparent; }
-}
-
-.form-control {
-  background-color: #29487D ;
-  padding: 0px 20px 0 20px;
-  margin-top: 10px;
-  color: solid white;
-  font-size: 20px;
-  font-weight: 500;
-  border: 1px  #29487D;
-  min-height:35px;
-  height: auto;
-  border-radius: 40px 40px  40px 40px;
-}
-.form-control :focus {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-color: transparent;
-
-}
-
-hr {
-  display: block;
-  position: relative;
-  padding: 0;
-  margin: 8px auto;
-  height: 0;
-  width: 90%;
-  max-height: 0;
-  font-size: 1px;
-  line-height: 0;
-  clear: both;
-  border: none;
-  border-bottom: 1px solid lightgray;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
