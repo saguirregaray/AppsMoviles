@@ -3,41 +3,41 @@
     <head>
         <title>Calculadora</title>
         <link rel="stylesheet" type="text/css" href="../css/calculadora.css" />
-        <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script src="../js/calculadora.js"></script>
     </head>
-
+  
     <body>
         <div class="phone-screen">
-            <div class="board"></div>
+            <div id="screen" ></div>
             <div class="numbers">
             <div class="row">
-                <button class="lightGreyButton" >C</button>
-                <button class="lightGreyButton">+/-</button>
-                <button class="lightGreyButton">%</button>
-                <button class="orangeButton">/</button>
+                <button class="lightGreyButton" value="" onclick="clearScreen()" >C</button>
+                <button class="lightGreyButton" onclick="toggleSign()">+/-</button>
+                <button class="lightGreyButton" onclick="percentage()">%</button>
+                <button class="orangeButton" id="quotient" value = "/" onclick="addValue(this)">/</button>
             </div>
             <div class="row">
-                <button class="greyButton">7</button>
-                <button class="greyButton">8</button>
-                <button class="greyButton">9</button>
-                <button class="orangeButton">x</button>
+                <button class="greyButton" value="7" onclick="display(this)" >7</button>
+                <button class="greyButton" value="8" onclick="display(this)">8</button>
+                <button class="greyButton" value="9" onclick="display(this)">9</button>
+                <button class="orangeButton" id="product" value="*" onclick="addValue(this)">x</button>
             </div>
             <div class="row">
-                <button class="greyButton">4</button>
-                <button class="greyButton">5</button>
-                <button class="greyButton">6</button>
-                <button class="orangeButton">-</button>
+                <button class="greyButton" value="4" onclick="display(this)">4</button>
+                <button class="greyButton" value="5" onclick="display(this)">5</button>
+                <button class="greyButton" value="6" onclick="display(this)">6</button>
+                <button class="orangeButton" id="difference" value="-" onclick="addValue(this)">-</button>
             </div>
             <div class="row">
-                <button class="greyButton">3</button>
-                <button class="greyButton">2</button>
-                <button class="greyButton">1</button>
-                <button class="orangeButton">+</button>
+                <button class="greyButton" value="3" onclick="display(this)">3</button>
+                <button class="greyButton" value="2" onclick="display(this)">2</button>
+                <button class="greyButton" value="1" onclick="display(this)">1</button>
+                <button class="orangeButton" id="sum" value="+" onclick="addValue(this)">+</button>
             </div>
             <div class="row">
-                <button class="longButton">0</button>
-                <button class="greyButton">.</button>
-                <button class="orangeButton">=</button>
+                <button class="longButton" value="0" onclick="display(this)">0</button>
+                <button class="greyButton" value="." onclick="display(this)">.</button>
+                <button class="orangeButton" id="result" onclick="result(this)">=</button>
             </div>
         </div>
         </div>
