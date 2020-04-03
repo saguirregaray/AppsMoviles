@@ -135,6 +135,10 @@ overflow: -moz-hidden-unscrollable;
 text-align: right;
 }
 
+button:focus{ 
+outline:0;
+ }
+
 
 
 
