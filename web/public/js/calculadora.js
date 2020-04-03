@@ -61,6 +61,10 @@ function result(){
 
 function clearScreen(){
     document.getElementById("screen").innerText = '';
+    switchColorOff("quotient");
+    switchColorOff("product");
+    switchColorOff("difference");
+    switchColorOff("sum");
 }
 
 function switchColorOn(id){
@@ -86,11 +90,6 @@ function restartCalculator(){
     calculator.firstOperand = '' ;
     calculator.secondOperand = '';
     calculator.operator = null;
-    switchColorOff("quotient");
-    switchColorOff("product");
-    switchColorOff("difference");
-    switchColorOff("sum");
-
 }
 
 
