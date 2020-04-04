@@ -53,7 +53,11 @@ function addValue(obj){
 }
 
 function result(){
-    finalResult =  performCalculation(parseFloat(calculator.firstOperand), calculator.operator, parseFloat(calculator.secondOperand));
+    if(calculator.waitingForOperator)
+        finalResult =  performCalculation(parseFloat(calculator.firstOperand), calculator.operator, parseFloat(calculator.firstOperand)).toFixed(5);
+    else
+        finalResult =  performCalculation(parseFloat(calculator.firstOperand), calculator.operator, parseFloat(calculator.secondOperand)).toFixed(5);
+
     clearScreen();
     restartCalculator();
     document.getElementById("screen").innerText += finalResult;
