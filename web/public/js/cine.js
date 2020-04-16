@@ -11,6 +11,7 @@ $(document).ready(function() {
         $(".imageContainer").fadeOut('fast').promise().done(function() {
 
             consultarPeliculas();
+
          
         });
     });
@@ -44,11 +45,11 @@ function consultarPeliculas() {
 
             $.each(this.cinemaShows, function(j, entry ) {
                 //a la lista de la peli i le agrego que cine es
-                $('<li>Cine: ' + entry.cinema + '</li>').appendTo("#list" + i);
+                $('<li>Cine: ' + entry.cinema + "\nFechas:" + '</li>').appendTo("#list" + i);
 
                 $.each(this.shows, function(k, entry ) {
                     //a la lista de la peli i le agrego las fechas
-                    $('<li>Fecha: ' + entry.timeToDisplay + '</li>').appendTo("#list" + i);
+                    $('<li>' + entry.timeToDisplay + '</li>').appendTo("#list" + i);
                     
                     //si hago click en una peli muestro los datos de esa
                     $('#' + i).click(function() {
