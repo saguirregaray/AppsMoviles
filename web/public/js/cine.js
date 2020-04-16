@@ -11,8 +11,9 @@ $(document).ready(function() {
         $(".imageContainer").fadeOut('fast').promise().done(function() {
 
             consultarPeliculas();
-
-         
+            consultarPeliculas();
+            consultarPeliculas();
+            consultarPeliculas();
         });
     });
 
