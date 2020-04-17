@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     $(".imageContainer").hide();
 
+    $("#videoContainer").removeClass("active").hide();
+
     $(".imageContainer ").addClass("active").show()
 
 	$(".imageContainer").click(function() {
@@ -11,14 +13,10 @@ $(document).ready(function() {
         $(".imageContainer").fadeOut('fast').promise().done(function() {
 
             consultarPeliculas();
-            consultarPeliculas();
-            consultarPeliculas();
-            consultarPeliculas();
         });
     });
 
 });
-
 
 
 function consultarPeliculas() {
@@ -29,8 +27,8 @@ function consultarPeliculas() {
       dataType: 'json'
     })
     .done(function(data) {
-        $.each(data.contentCinemaShows, function(i, entry ) {
-            var stringMovie = "<div><div class= " + "'image'" + "style= " + "'background-image: url(" + entry.posterURL + "');'" + "></div></div>";
+        $.each(data.contentCinemaShows, function(i, movie ) {
+            var stringMovie = "<div><div class= " + "'image'" + "style= " + "'background-image: url(" + movie.posterURL + "');'" + "></div></div>";
             
             //creo pelis
             $(stringMovie).addClass('movieContainer').attr("id", i).appendTo('#mainContainer');        
@@ -44,28 +42,35 @@ function consultarPeliculas() {
             //muestro pelis
             $(".movieContainer").addClass("active").fadeIn();
 
-            $.each(this.cinemaShows, function(j, entry ) {
+            $.each(this.cinemaShows, function(j, cinemaShows ) {
                 //a la lista de la peli i le agrego que cine es
-                $('<li>Cine: ' + entry.cinema + "\nFechas:" + '</li>').appendTo("#list" + i);
+                $('<li>Cine: ' + cinemaShows.cinema + "\nFechas:" + '</li>').appendTo("#list" + i);
 
-                $.each(this.shows, function(k, entry ) {
+                $.each(this.shows, function(k, show ) {
                     //a la lista de la peli i le agrego las fechas
-                    $('<li>' + entry.timeToDisplay + '</li>').appendTo("#list" + i);
+                    $('<li>' + show.timeToDisplay + '</li>').appendTo("#list" + i);
                     
                     //si hago click en una peli muestro los datos de esa
                     $('#' + i).click(function() {
+                        // $('#' + i).removeClass("active").fadeOut('fast').promise().done(function() {
+                        $(".movieContainer").removeClass("active").hide()
 
-                        $('#' + i).removeClass("active").fadeOut('fast').promise().done(function() {
+                        //reproduce trailer
+                        getTrailer(movie.movie);
+                        $("#videoContainer").addClass("active").show();
                         $('#time' + i).addClass("active").fadeIn();
-                        });
+                        
 
                             $('#time' + i).click(function() {
+                                $('#videoContainer').removeClass("active").fadeOut('fast')
+                                $('.time').removeClass("active").fadeOut('fast').promise().done(function() {
+                                $('.movieContainer').addClass("active").fadeIn();
+                            });
 
-                                $('#time' + i).removeClass("active").fadeOut('fast').promise().done(function() {
-                                $('#' + i).addClass("active").fadeIn();
-                            });
                         
-                            });
+                        });
+
+                           
 
                     });
         
@@ -81,3 +86,40 @@ function consultarPeliculas() {
     });
   }
 
+  $(document).ready(function() {
+    $('#play-video').on('click', function(ev) {
+   
+      $("#video")[0].src += "&autoplay=1";
+      ev.preventDefault();
+   
+    });
+  });
+
+
+function getTrailer(name) {
+    $.ajax({
+        type: 'GET',
+        url: 'https://www.googleapis.com/youtube/v3/search',
+        data: {
+            key: 'AIzaSyC6uX7fBQiR1omE5XrgakrL2DdlVxDTmBA',
+            q: "'" + name + " trailer'",
+            part: 'snippet',
+            maxResults: 1,
+            type: 'video',
+            videoEmbeddable: true,
+        },
+        success: function(data){
+            embedVideo(data)
+        },
+        error: function(response){
+            console.log("Request Failed");
+        }
+      });
+
+}
+
+function embedVideo(data) {
+    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+    // $('h3').text(data.items[0].snippet.title)
+    // $('.description').text(data.items[0].snippet.description)
+}
