@@ -52,7 +52,7 @@ function consultarPeliculas() {
                     
                     //si hago click en una peli muestro los datos de esa
                     $('#' + i).click(function() {
-                        // $('#' + i).removeClass("active").fadeOut('fast').promise().done(function() {
+                       
                         $(".movieContainer").removeClass("active").hide()
 
                         //reproduce trailer
@@ -120,6 +120,4 @@ function getTrailer(name) {
 
 function embedVideo(data) {
     $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
-    // $('h3').text(data.items[0].snippet.title)
-    // $('.description').text(data.items[0].snippet.description)
 }
