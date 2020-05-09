@@ -7,7 +7,18 @@
     <script type="text/javascript" src="../js/base.js"></script>
 </head>
 <body>
-    <div id="result"></div>
+    <ul id="people"></ul>
+    
+    <form id="form" onsubmit="processForm()">
+        <div id="personId" hidden></div>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono" />
+    
+        <button type="submit">Submit</button>
+    </form>
+
+
 </body>
 
 </html>
